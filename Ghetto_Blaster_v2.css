@@ -1,0 +1,413 @@
+body {
+  background-image: url("Background/ssspill.svg");
+  background-color: #090909e2;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ 
+.full_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap:15px ;
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 21vh;
+    width: 214vh;
+    align-items: flex-start;
+    justify-content: space-around;
+      }
+
+main{
+    display: flex;
+    flex-direction:row;
+    height: 40vh;
+    width:214vh ;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-around;
+}
+
+footer{
+  height: 31vh;
+  width:214vh;
+  display: flex;
+  flex-direction:column;
+    /* border: solid black 2px; */
+  align-items: center;
+}
+#brick{
+position: absolute;
+left: 60%;
+}
+                              /* =================================== configuration music wave  ===================================*/
+.music_wave{
+border : solid;
+display: flex;
+height: 20vh;
+transform: rotate(180deg);
+background: #6b7292;
+
+}
+.music_wave span{
+background-color: #fff;
+width: 10vh;
+margin: 0 0.2vh;
+border-radius: .84vh;
+animation: loader 2s infinite;
+animation-play-state: paused;
+
+  }
+@keyframes loader {
+    0%, 100%{
+        height: 4.2vh;
+        background: #e30ffa ;
+    }
+    25%{
+        height: 18vh;
+        background: #dd6a0c;
+    }
+    50%{
+        height: 7vh;
+        background: #10b6c5;
+    }
+    75%{
+        height: 13.3vh;
+        background:#00c975 ;
+    }
+}
+.music_wave #el_1{
+  animation-delay: .2s;
+   
+}
+.music_wave #el_2{
+  animation-delay: .8s;
+}
+.music_wave #el_3{
+  animation-delay: .6s;
+}
+.music_wave #el_4{
+  animation-delay: .4s;
+}
+.music_wave #el_5{
+  animation-delay: .21s;
+}
+.music_wave #el_6{
+  animation-delay: .6s;
+}
+  
+
+.music_wave #er_1{
+  animation-delay: .6s;   
+}
+.music_wave #er_2{
+  animation-delay: .8s;
+}
+.music_wave #er_3{
+  animation-delay: .4s;
+}
+.music_wave #er_4{
+  animation-delay: .6s;
+}
+.music_wave #er_5{
+  animation-delay: .21s;
+}
+.music_wave #er_6{
+  animation-delay: .6s;
+}
+  
+
+                                        /* =================================== Animation titre ===================================  */
+.mixer-1 {
+  box-shadow: 75px 25px 15px 5px rgba(0, 0, 0, 0.456);
+  width: 60vh;
+  height: 21vh;
+  border: solid #090909 3px;
+  background-color:#3A4247  ;
+  position: relative;
+    }
+.container {
+overflow: hidden;
+display: flex;
+
+    /* Fonctionne avec toutes les tailles */
+    /* pour rotate on enlève le translate et on rajoute le rotate */
+    /* transform:  rotate(90deg); */
+  }
+
+                                      /* =================================== Font affichage titre =================================== */
+@font-face {
+font-family: 'atomic_clock_radioregular';
+src: url('atomicclockradio-webfont.woff2') format('woff2'),
+         url('atomicclockradio-webfont.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+.txt {
+font-family:'Atomic Clock Radio';
+white-space: nowrap;
+    font-size: 18vh;
+    animation: scrollTxt 15s linear infinite;
+  }
+  
+  .t1 {
+     color: rgb(0, 255, 34); 
+  }
+  .t2 {
+    color: rgb(0, 255, 34);  
+  }
+  @keyframes scrollTxt {
+    0%{
+      transform: translate(0%, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+                                /*  =================================== configuration des speakers =================================== */
+ .speaker-left { display : flex;
+ 
+     }
+ #sl_1 {
+  box-shadow: 75px 25px 15px 5px rgba(0, 0, 0, 0.456);
+   background: #F1F1F3;
+   height: 42vh;
+   width: 42vh;
+   border-radius: 100%;
+   border: solid #3A4247 4px;
+   animation: sound-move-1 500ms infinite;
+   animation-play-state: paused;
+ }
+ #sl_2 {
+   height: 35vh; 
+   width: 35vh;
+   background: #829399;
+   border: solid #3A4247 4px;
+   border-radius: 100%;
+   animation: sound-move-2 500ms infinite;
+   animation-play-state: paused;
+   position: absolute;
+   top: 2.8vh;
+   left:3vh;
+ }
+ #sl_3 {
+  border: solid #3A4247 4px;
+   height: 26vh; 
+   width: 26vh;
+   background: #F1F1F3;
+   border-radius: 100%;
+   animation: sound-move-3 500ms infinite;
+   animation-play-state: paused;
+   position: absolute;
+   top: 3.9vh;
+   left:3.9vh;
+ }
+ #sl_4{
+   height: 12.60vh; 
+   width: 12.60vh;
+   background: #3A4247;
+   border-radius: 100%;
+   border: solid #4b4a4a;
+   animation: sound-move-1 600ms ease-in-out infinite;
+   animation-play-state: paused;
+   position: absolute;
+   top: 6.3vh;
+   left:7vh;
+ }
+ @keyframes sound-move-1 { 75%{transform: scale(1.05);} 100%{transform: scale(1.1);}}
+ @keyframes sound-move-2 { 75%{transform: scale(1.025);} 100%{transform: scale(1.05);}}
+ @keyframes sound-move-3 { 75%{transform: scale(1.1);} 100% {transform: scale(1.2);}}
+
+ .speaker-right { display : flex;
+ }
+ #sr_1{
+  box-shadow: 75px 25px 15px 5px rgba(0, 0, 0, 0.456);
+  background: #F1F1F3;
+  height: 42vh;
+  width: 42vh;
+  border-radius: 100%;
+  border: solid #3A4247 4px;
+  animation: sound-move-1 500ms infinite;
+  animation-play-state: paused;
+}
+#sr_2{
+  height: 35vh; 
+  width: 35vh;
+  background: #829399;
+  border: solid #3A4247 4px;
+  border-radius: 100%;
+  animation: sound-move-2 500ms infinite;
+  animation-play-state: paused;
+  position: absolute;
+  top: 2.8vh;
+  left:3vh;
+}
+#sr_3{
+  border: solid #3A4247 4px;
+  height: 26vh; 
+  width: 26vh;
+  background: #F1F1F3;
+  border-radius: 100%;
+  animation: sound-move-3 500ms infinite;
+  animation-play-state: paused;
+  position: absolute;
+  top: 3.9vh;
+  left:3.9vh;
+}
+#sr_4{
+  height: 12.60vh; 
+  width: 12.60vh;
+  background: #3A4247;
+  border-radius: 100%;
+  border: solid #4b4a4a;
+  animation: sound-move-1 600ms ease-in-out infinite;
+  animation-play-state: paused;
+  position: absolute;
+  top: 6.3vh;
+  left:7vh;
+}
+@keyframes sound-move-1 { 75%{transform: scale(1.05);} 100%{transform: scale(1.1);}}
+@keyframes sound-move-2 { 75%{transform: scale(1.025);} 100%{transform: scale(1.05);}}
+@keyframes sound-move-3 { 75%{transform: scale(1.1);} 100% {transform: scale(1.2);}}
+
+                                                    /* ===== configuration de la pochette Album  ===== */
+ .pochette_album{
+  z-index: 1;
+    display: flex;
+    position: relative;
+    background: #fff;
+    width: 42vh;
+    height:300px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.33);
+    color: white;
+    box-shadow: 75px 25px 15px 5px rgba(0, 0, 0, 0.456);
+  }
+ 
+                                                      /* ===== configuration des boutons  ===== */
+ .bouton_lecture{
+display: flex;
+ flex-direction:row;
+ align-items: center;
+ gap: 5vh;
+ padding: 5vh;
+ }
+ .shuffle{
+  height: auto;
+  width: auto;  
+  background-color: rgba(255, 255, 255, 0.33);
+  color: white;
+  box-shadow: 23px 25px 15px 5px black;
+}
+  .backward{
+  height: auto;
+  width: auto; 
+  background-color: rgba(255, 255, 255, 0.33);
+  color: white;
+  box-shadow: 23px 25px 15px 5px black;
+  }
+
+  .play{
+  height: auto;
+  width: auto; 
+  background-color: rgba(255, 255, 255, 0.33);
+  color: white;
+  box-shadow: 23px 25px 15px 5px black;
+   }
+
+  .forward{
+  height: auto;
+  width: auto; 
+  background-color: rgba(255, 255, 255, 0.33);
+  color: white;
+  box-shadow: 23px 25px 15px 5px black;
+  }
+
+                                                        /* ===== configuration du VOLUME  ===== */
+
+.volume-control {
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	gap: 3vh;
+  flex-direction: column;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+.volume-control .bars {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	margin-left: 20px;
+	width: 160px;
+	height: 80%;
+}
+.volume-control .bars .bar {
+	width: 14%;
+	margin: 0 3%;
+	background-color: #bbb;
+	transition: .3s ease-in-out;
+}
+.bars .bar:nth-child(1) {
+	height: 20%;
+  cursor: pointer;
+}
+
+.volume-control .bars .bar:nth-child(2) {
+	height: 40%;
+  cursor: pointer;
+}
+.volume-control .bars .bar:nth-child(3) {
+	height: 60%;
+  cursor: pointer;
+}
+
+.volume-control .bars .bar:nth-child(4) {
+	height: 80%;
+  cursor: pointer;
+}
+
+.volume-control .bars .bar:nth-child(5) {
+	height: 100%;
+  cursor: pointer;
+}
+
+/* ===== configuration des boutons  ===== */
+input[type="range"]{
+  box-shadow: 23px 25px 15px 5px black;
+}
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+/* For devices with width of 480px and less, like phones */
+@media only screen and (max-width: 480px) and (orientation:landscape) {
+  .full_container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* For devices with width between 481px and 768px, like larger phones and portrait tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px)and (orientation:landscape){
+  .full_container{
+    display: flex;
+  }
+} 
+
+/* For devices with width between 769px and 1279px, like landscape tablets and laptops */
+@media only screen and (min-width: 769px) and(max-width: 1279px) and (orientation:landscape){} 
+
+/* For devices with width of 1280px and more, like desktop computers */
+@media only screen and (min-width: 1280px) {}

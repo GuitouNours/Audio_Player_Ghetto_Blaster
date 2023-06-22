@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Ghetto_Blaster_v2.css" rel="stylesheet" />
+    <!-- Favicons -->
+    <link href="favicon.png" type="image/png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      href="https://fonts.cdnfonts.com/css/atomic-clock-radio"
+      rel="stylesheet"
+    />
+    <title>Radio Ghetto Blaster v2</title>
+  </head>
+  <body>
+    <audio id="monPlayer">
+      <source src="Musique/Cream_Blade.mp3" type="audio/mp3" />
+    </audio>
+    <div class="full_container">
+      <header>
+        <div class="music_wave">
+          <span id="el_1"></span>
+          <span id="el_2"></span>
+          <span id="el_3"></span>
+          <span id="el_4"></span>
+          <span id="el_5"></span>
+          <span id="el_6"></span>
+        </div>
+
+        <div class="mixer_Container">
+          <div class="mixer-1">
+            <!-- AFFICHAGE TITRE DE LA CHANSON  -->
+            <div class="container">
+              <span id="txt1" class="txt t1"></span>
+              <span id="txt2" class="txt t2"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="music_wave" id="music_wave">
+          <span id="er_1"></span>
+          <span id="er_2"></span>
+          <span id="er_3"></span>
+          <span id="er_4"></span>
+          <span id="er_5"></span>
+          <span id="er_6"></span>
+        </div>
+      </header>
+
+      <main>
+        <!-- SPEAKER GAUCHE -->
+
+        <div class="speaker-left" id="speaker_left">
+          <div id="sl_1">
+            <div id="sl_2">
+              <div id="sl_3">
+                <div id="sl_4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pochette Album -->
+        <div class="pochette_album">
+          <img src="" id="images" />
+        </div>
+        <!-- Speaker Droite -->
+        <div class="speaker-right" id="speaker_right">
+          <div id="sr_1">
+            <div id="sr_2">
+              <div id="sr_3">
+                <div id="sr_4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+       
+        <!-- boutons de lecture -->
+        <div class="bouton_lecture">
+          <!-- <button onclick="shuffle()" type="button">
+            <img src="boutons/shuffle-OFF.png" id="shuffle" />
+          </button>-->
+          <button onclick="prev()" type="button">
+            <img src="boutons/backward.png" />
+          </button>
+          <button onclick="joue()" type="button">
+            <img src="boutons/play.png" />
+          </button>
+          <button onclick="pause()" type="button">
+            <img src="boutons/pause.png" />
+          </button>
+          <button onclick="next(),changeBackground()" type="button">
+            <img src="boutons/forward.png" />
+          </button>
+
+          <!-- Volume-->
+            <div class="volume-control">Volume Control
+              <div class="bars"> 
+                <span class="bar" id="sound_20" onclick="changevolume(0.2);"></span>
+                <span class="bar" id="sound_40" onclick="changevolume(0.4);"></span>
+                <span class="bar" id="sound_60" onclick="changevolume(0.6);"></span>
+                <span class="bar" id="sound_80" onclick="changevolume(0.8);"></span>
+                <span class="bar" id="sound_100" onclick="changevolume(1);"></span>
+              </div>
+            </div>
+      </footer>
+    </div>
+    <script src="Ghetto_Blaster_v2.js"></script>
+  </body>
+</html>
